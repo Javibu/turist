@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	
+	<link rel="stylesheet" type="text/css" href="Css/ElCss.css">
+	<meta charset="UTF-8">
+	<title>Turist Javibu</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js" type="text/javascript">
+        </script>
+    <script>
+        $(document).ready(function(){
+            var prueba
+            $("#btnconsultar").click(function(){
+                var varid=$("#txtcedula").val();
+               $.ajax({
+                   type:"GET",
+                   url:"https://turistjavibu.herokuapp.com/todo",
+                   dataType:"json",
+                   contentType:"text/plain"
+               }).done(function(msg){
+                   var htmlpuro='<table border=1>'
+                   for (var dato in msg[0])
+                   {
+                       htmlpuro+='<tr>'
+                           htmlpuro+='<td>'+  msg[0][dato].direccion+'</td>'
+                           htmlpuro+='<td>'+ msg[0][dato].nombre+'</td>'
+                        htmlpuro+='</tr>'
+
+                   }
+                   htmlpuro+='</table>'
+                    $("#contenido").html(htmlpuro)
+               });
+               
+               
+               
+            });
+            
+            $("#btninsertar").click(function(){
+                
+                var varcedula =$("#txtcedula").val();
+                var varnombre=$("#txtnombre").val();
+                var vardireccion=$("#txtdireccion").val();
+                
+                datos={"cedula":varcedula,"nombre":varnombre,"direccion":vardireccion};
+                //datos={"razonsocial":"xxx","correo":"correo","token":"token"};
+               $.ajax({
+                   type:"POST",
+                   url:"https://turistjavibu.herokuapp.com/todo",
+                   dataType:"text",
+                   contentType:"application/json",
+                   data: JSON.stringify(datos)
+               }).done(function(msg){
+                   alert(msg);
+               }); 
+           
+            });
+            
+            
+            $("#btnmodificar").click(function(){
+                
+                var varcedula=$("#txtcedula").val();
+                var varnombre=$("#txtnombre").val();
+                var vardireccion=$("#txtdireccion").val();
+                
+                datos={"cedula":varcedula,"nombre":varnombre,"direccion":vardireccion};
+                
+               $.ajax({
+                   type:"PUT",
+                   url:"https://turistjavibu.herokuapp.com/todo",
+                   dataType:"text",
+                   contentType:"application/json",
+                   data: JSON.stringify(datos)
+               }).done(function(msg){
+                   alert(msg);
+               }); 
+           
+            });
+            
+            $("#btneliminar").click(function(){
+                var varcedula=$("#txtcedula").val();
+                var varnombre=$("#txtnombre").val();
+                var vardireccion=$("#txtdireccion").val();
+                datos={"cedula":varcedula,"nombre":varnombre,"direccion":vardireccion};
+
+               $.ajax({
+                   type:"DELETE",
+                   url:"https://turistjavibu.herokuapp.com/todo" ,
+                   dataType:"text",
+                   contentType:"application/json",
+                   data:JSON.stringify(datos)
+               }).done(function(msg){
+                   alert(msg);
+               });
+            });
+            
+            
+            
+            
+            
+            
+            
+            
+        });
+    </script>
+</head>
+<body>
+	
+	
+	<h1>Turisct Javibu</h1>
+	
+		<div id="footer">
+		        <div class="bot-left">
+		            <img width="75px"   src="Img/LogoPagina.jpg" class="log" />
+		            <div class="indent-footer">
+		                <div class="fright">
+		                    <ul>
+		                      <li><a href="inicio.html">Inicio</a></li>
+								<li><a href="Atractivos.html">Atractivos</a></li>
+								<li><a href="Servicios.html">Servicios</a></li>
+								<li><a href="Eventos.html">Eventos</a></li>
+								<li><a href="Contacto.html">Contacto</a></li>
+								<li><a href="Favoritos.html">Favoritos</a></li>
+								<li><a href="index.html">prueba_CRUD</a></li>
+		                     
+		                    </ul>
+		                </div>
+		                	
+		            </div>
+		        </div>
+		    </div>
+		    
+		
+	
+		<div>Cliente</div>
+        <form>
+            <label>Cedula</label>
+            <input type="text" id="txtcedula"/>
+            <label>Nombre</label>
+            <input type="text" id="txtnombre"/>
+            <label>Dirección</label>
+            <input type="text" id="txtdireccion"/>
+            
+            <input type="button" id="btnconsultar" value="Consultar"/>
+            <input type="button" id="btninsertar" value="Insertar"/>
+            <input type="button" id="btnmodificar" value="Modificar"/>
+            <input type="button" id="btneliminar" value="Eliminar"/>
+        </form>
+        <div id='contenido'> contenido  </div>    
+	
+
+
+	<footer>
+		<address>Informacion de contacto, Turisct Javibu <br/>La vida es dura.... Pero más dura es la verdura.. <br/><br/> El mar siendo tan inmenso.. tiene una orilla hasta la cual llega... <strong>POR: Javier Alcivar</strong><br/></address>
+
+	</footer>
+
+		<div id="footer">
+		        <div class="bot-left">
+		            <div class="bot-right">
+		            	<img alt="" src="Img/IcoCell.jpg" class="img" />
+		            
+		                <div class="indent-footer">
+			                  <div class="fright">
+			                    <ul>
+			                      <li><a href="inicio.html">Inicio</a></li>
+									<li><a href="Atractivos.html">Atractivos</a></li>
+									<li><a href="Servicios.html">Servicios</a></li>
+									<li><a href="Eventos.html">Eventos</a></li>
+									<li><a href="Contacto.html">Contacto</a></li>
+									<li><a href="Favoritos.html">Favoritos</a></li>
+									<li><a href="Administrador.html">Administrador</a></li>
+			                      <li class="last"><a href="contactenos.html">Contáctenos  </a></li>
+			                    </ul>
+			                  </div>
+			                	<span>Call Center;  <strong>Alcivar Martinez Wellington Javier</strong> </span><br />
+			                    Ecuador: +593 <strong>0989 861 881</strong>
+		                </div>
+		            </div>
+		        </div>
+		    </div>
+		</div>
+
+
+
+	
+</body>
+</html>
