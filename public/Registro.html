@@ -22,7 +22,7 @@
                 var varconficontra=$("#txtconficontra").val();
                 var vardireccion=$("#txtdireccion").val();
                 
-                datos={"cedula":varcedula,"nombre":varnombre,"direccion":vardireccion};
+                datos={"cedula":varcedula,"nombre":varnombre,"direccion":vardireccion,"pais":varpais,"edad":varedad,"contra":varcontra,"conficontra":varconficontra};
                 //datos={"razonsocial":"xxx","correo":"correo","token":"token"};
                $.ajax({
                    type:"POST",
@@ -59,9 +59,9 @@
             <label>Edad</label>
             <input type="text" id="txtedad"/>
             <label>Contraseña</label>
-            <input type="text" id="txtcontra"/>
+            <input type="password" id="txtcontra"/>
             <label>Repita su contraseña</label>
-            <input type="text" id="txtconficontra"/>
+            <input type="password" id="txtconficontra"/>
 
             <input type="button" id="btninsertar" value="Insertar"/>
             
