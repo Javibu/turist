@@ -51,9 +51,13 @@
                 
                 var varcedula =$("#txtcedula").val();
                 var varnombre=$("#txtnombre").val();
+                var varpais=$("#txtpais").val();
+                var varedad=$("#txtedad").val();
+                var varcontra=$("#txtcontra").val();
+                var varconficontra=$("#txtconficontra").val();
                 var vardireccion=$("#txtdireccion").val();
                 
-                datos={"cedula":varcedula,"nombre":varnombre,"direccion":vardireccion};
+                datos={"cedula":varcedula,"nombre":varnombre,"direccion":vardireccion,"pais":varpais,"edad":varedad,"contra":varcontra,"conficontra":varconficontra};
                 //datos={"razonsocial":"xxx","correo":"correo","token":"token"};
                $.ajax({
                    type:"POST",
@@ -70,11 +74,15 @@
             
             $("#btnmodificar").click(function(){
                 
-                var varcedula=$("#txtcedula").val();
+                var varcedula =$("#txtcedula").val();
                 var varnombre=$("#txtnombre").val();
+                var varpais=$("#txtpais").val();
+                var varedad=$("#txtedad").val();
+                var varcontra=$("#txtcontra").val();
+                var varconficontra=$("#txtconficontra").val();
                 var vardireccion=$("#txtdireccion").val();
                 
-                datos={"cedula":varcedula,"nombre":varnombre,"direccion":vardireccion};
+                datos={"cedula":varcedula,"nombre":varnombre,"direccion":vardireccion,"pais":varpais,"edad":varedad,"contra":varcontra,"conficontra":varconficontra};
                 
                $.ajax({
                    type:"PUT",
@@ -89,10 +97,16 @@
             });
             
             $("#btneliminar").click(function(){
-                var varcedula=$("#txtcedula").val();
+                
+                var varcedula =$("#txtcedula").val();
                 var varnombre=$("#txtnombre").val();
+                var varpais=$("#txtpais").val();
+                var varedad=$("#txtedad").val();
+                var varcontra=$("#txtcontra").val();
+                var varconficontra=$("#txtconficontra").val();
                 var vardireccion=$("#txtdireccion").val();
-                datos={"cedula":varcedula,"nombre":varnombre,"direccion":vardireccion};
+                
+                datos={"cedula":varcedula,"nombre":varnombre,"direccion":vardireccion,"pais":varpais,"edad":varedad,"contra":varcontra,"conficontra":varconficontra};
 
                $.ajax({
                    type:"DELETE",
