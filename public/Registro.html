@@ -11,7 +11,7 @@
     <script>
         $(document).ready(function(){
             var prueba
-            var boton='<input type="button" id="btninsertar" value="Insertar"/>'
+            
 
             $("#btncomprobar").click(function(){
                 
@@ -19,7 +19,7 @@
                 var varcontra=$("#txtcontra").val();
                 var varconficontra=$("#txtconficontra").val();
                 if(varcontra==varconficontra){
-                		document.querySelector('#btngenerado').innerHTML=boton;
+                		document.querySelector('#btngenerado').innerHTML='<input type="button" id="btninsertar" value="Insertar"/>';
                 }else{
                 	alert("Las contraseñas no coinciden")
                 }
