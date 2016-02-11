@@ -19,6 +19,14 @@
                    contentType:"text/plain"
                }).done(function(msg){
                    var htmlpuro='<table border=1>'
+                   		htmlpuro+='<tr>'
+                           htmlpuro+='<td>CEDULA</td>'
+                           htmlpuro+='<td>DIRECCION</td>'
+                           htmlpuro+='<td>NOMBRE</td>'
+                           htmlpuro+='<td>EDAD</td>'
+                           htmlpuro+='<td>PAIS</td>'
+                        htmlpuro+='</tr>'
+
                    for (var dato in msg[0])
                    {
                        htmlpuro+='<tr>'
