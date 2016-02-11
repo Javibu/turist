@@ -16,6 +16,10 @@
                 
                 var varcedula =$("#txtcedula").val();
                 var varnombre=$("#txtnombre").val();
+                var varpais=$("#txtpais").val();
+                var varedad=$("#txtedad").val();
+                var varcontra=$("#txtcontra").val();
+                var varconficontra=$("#txtconficontra").val();
                 var vardireccion=$("#txtdireccion").val();
                 
                 datos={"cedula":varcedula,"nombre":varnombre,"direccion":vardireccion};
@@ -50,8 +54,15 @@
             <input type="text" id="txtnombre"/>
             <label>Dirección</label>
             <input type="text" id="txtdireccion"/>
-            
-            
+			<label>Pais</label>
+            <input type="text" id="txtpais"/>
+            <label>Edad</label>
+            <input type="text" id="txtedad"/>
+            <label>Contraseña</label>
+            <input type="text" id="txtcontra"/>
+            <label>Repita su contraseña</label>
+            <input type="text" id="txtconficontra"/>
+
             <input type="button" id="btninsertar" value="Insertar"/>
             
         </form>
