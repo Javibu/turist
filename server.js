@@ -41,7 +41,7 @@ router.route('/')
              return res.status(404).send('error de todas')
          }
      })
-    return res.status(200).send('ok')
+    return res.status(200).send('Ha eliminado correctamente')
 });
 
 var port=Number (process.env.PORT || 3000);
