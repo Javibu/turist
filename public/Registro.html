@@ -13,22 +13,7 @@
             var prueba
             
 
-            $("#btncomprobar").click(function(){
-                
-                
-                var varcontra=$("#txtcontra").val();
-                var varconficontra=$("#txtconficontra").val();
-                if(varcontra==varconficontra){
-                		document.querySelector('#btngenerado').value="Envia Registro";
-                		document.querySelector('#btngenerado').id="btninsertar";
-                }else{
-                	alert("Las contraseñas no coinciden")
-                }
-                
-                
-               
-           
-            });
+            
 
 
             
@@ -108,8 +93,8 @@
             <label>Repita su contraseña</label>
             <input type="password" id="txtconficontra"/>
 
-			<input type="button" id="btncomprobar" value="Comprobar"/>
-            <div id="btngenerado" ></div>
+			<input type="button" id="btninsertar" value="inviar registro"/>
+            
 
             
             
