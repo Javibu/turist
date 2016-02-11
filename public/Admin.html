@@ -22,8 +22,12 @@
                    for (var dato in msg[0])
                    {
                        htmlpuro+='<tr>'
-                           htmlpuro+='<td>'+  msg[0][dato].direccion+'</td>'
+                           htmlpuro+='<td>'+  msg[0][dato].cedula+'</td>'
+                           htmlpuro+='<td>'+ msg[0][dato].direccion+'</td>'
                            htmlpuro+='<td>'+ msg[0][dato].nombre+'</td>'
+                           htmlpuro+='<td>'+ msg[0][dato].edad+'</td>'
+                           htmlpuro+='<td>'+ msg[0][dato].pais+'</td>'
+                           
                         htmlpuro+='</tr>'
 
                    }
@@ -176,7 +180,6 @@
 									<li><a href="Eventos.html">Eventos</a></li>
 									<li><a href="Contacto.html">Contacto</a></li>
 									<li><a href="Favoritos.html">Favoritos</a></li>
-									<li><a href="Administrador.html">Administrador</a></li>
 			                      <li class="last"><a href="contactenos.html">Contáctenos  </a></li>
 			                    </ul>
 			                  </div>
