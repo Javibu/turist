@@ -19,7 +19,8 @@
                 var varcontra=$("#txtcontra").val();
                 var varconficontra=$("#txtconficontra").val();
                 if(varcontra==varconficontra){
-                		document.querySelector('#btngenerado').innerHTML='<input type="button" id="btninsertar" value="Insertar"/>';
+                		document.querySelector('#btngenerado').value="Envia Registro";
+                		document.querySelector('#btngenerado').id="btninsertar";
                 }else{
                 	alert("Las contraseñas no coinciden")
                 }
