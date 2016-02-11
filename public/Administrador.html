@@ -10,18 +10,21 @@
     	$(document).ready(function(){
             var prueba;
             var cuadro='<table border>';
-            
+            		cuadro+='<tr>';
+                		cuadro+='<td>';
+                			cuadro+='<a href="Admin.html">SIGUIENTE</a>';
+                		cuadro+='</td>';
+                	cuadro+='</tr>';
+                cuadro+='</table>';
+
+
             
             $("#btnconfirmar").click(function(){
                 
                 var varadmin =$("#txtcontraadmin").val();
                 if(varadmin== 224426){
                 	alert("Las contraseñas coincidan, BIENVENIDO!! ADMIN");
-                	cuadro+='<tr>';
-                		cuadro+='<td>';
-                			cuadro+='<a href="Admin.html">SIGUIENTE</a>';
-                		cuadro+='<td>';
-                	cuadro+='</tr>';
+                	
                 	$('#generado').innerHTML=cuadro;
 
                 }else{
@@ -73,7 +76,10 @@
             		<input type="password" id="txtcontraadmin"/>
 
             		<input type="button" id="btnconfirmar" value="Insertar"/>
-            		<div id="generado"></div>
+            		<td>
+            			<div id="generado"></div>
+            		</td>
+            		
 				</td>
 			</tr>
 		</table>
