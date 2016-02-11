@@ -29,6 +29,7 @@ router.route('/')
     miRuta.child(req.body.cedula).set(req.body)
     res.status(200).send('Accion completada')
 })
+
 .put(function(req,res,next){
 
     miRuta.child(req.body.cedula).set(req.body)
