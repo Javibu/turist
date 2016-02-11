@@ -11,6 +11,25 @@
     <script>
         $(document).ready(function(){
             var prueba
+            var boton='<input type="button" id="btninsertar" value="Insertar"/>'
+
+            $("#btncomprobar").click(function(){
+                
+                
+                var varcontra=$("#txtcontra").val();
+                var varconficontra=$("#txtconficontra").val();
+                if(varcontra=varconficontra){
+                		document.querySelector('#btngenerado').innerHTML=boton;
+                }else{
+                	alert("Las contraseñas no coinciden")
+                }
+                
+                
+               
+           
+            });
+
+
             
             $("#btninsertar").click(function(){
                 
@@ -64,18 +83,7 @@
 		                     
 		                    </ul>
 		                </div>
-		                	<div>
-		                		<div>In sing</div>
-							        <form>
-							            <label>Cedula</label>
-							            <input type="text" id="txtcedula"/>  
-							            <label>Contraseña</label>
-							            <input type="password" id="txtcontra"/>
-						
-							            <input type="button" id="btninsertar" value="Ingresar"/>
-							            
-							        </form>
-		                	</div>
+		                	
 		            </div>
 		        </div>
 		    </div>
@@ -99,7 +107,10 @@
             <label>Repita su contraseña</label>
             <input type="password" id="txtconficontra"/>
 
-            <input type="button" id="btninsertar" value="Insertar"/>
+			<input type="button" id="btncomprobar" value="Comprobar"/>
+            <div id="btngenerado" ></div>
+
+            
             
         </form>
 
