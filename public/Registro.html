@@ -26,19 +26,25 @@
                 var varcontra=$("#txtcontra").val();
                 var varconficontra=$("#txtconficontra").val();
                 var vardireccion=$("#txtdireccion").val();
+
+                if(varcontra==varconficontra){
+
+                	alert("contraseñas coinciden")
                 
-                datos={"cedula":varcedula,"nombre":varnombre,"direccion":vardireccion,"pais":varpais,"edad":varedad,"contra":varcontra,"conficontra":varconficontra};
-                //datos={"razonsocial":"xxx","correo":"correo","token":"token"};
-               $.ajax({
-                   type:"POST",
-                   url:"https://turistjavibu.herokuapp.com/todo",
-                   dataType:"text",
-                   contentType:"application/json",
-                   data: JSON.stringify(datos)
-               }).done(function(msg){
-                   alert(msg);
-               }); 
-           
+	                datos={"cedula":varcedula,"nombre":varnombre,"direccion":vardireccion,"pais":varpais,"edad":varedad,"contra":varcontra,"conficontra":varconficontra};
+	                //datos={"razonsocial":"xxx","correo":"correo","token":"token"};
+	               $.ajax({
+	                   type:"POST",
+	                   url:"https://turistjavibu.herokuapp.com/todo",
+	                   dataType:"text",
+	                   contentType:"application/json",
+	                   data: JSON.stringify(datos)
+	               }).done(function(msg){
+	                   alert(msg);
+	               }); 
+	            }else{
+	            	alert("las contraseñas no coinciden");
+	            }
             });
   
             
